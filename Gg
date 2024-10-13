@@ -1,0 +1,268 @@
+-- Load Orion Library
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
+
+-- Create a new window
+local Window = OrionLib:MakeWindow({Name = "Golden", IntroText = "Welcome to GodenScript", HidePremium = false})
+
+-- Create a single tab named OP Skill Tab "
+local Tab1 = Window:MakeTab({
+    Name = "NoCoolDownSkills",
+    Icon = "rbxassetid://4483345998", -- You can change this icon ID
+    PremiumOnly = false
+})
+
+-- Gojo's skills
+Tab1:AddButton({
+    Name = "RED",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.Red:FireServer()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "RED: Unleashes a powerful beam that obliterates everything in its path, reflecting Gojo's immense strength and precision.",
+            Time = 5
+        })
+    end
+})
+
+Tab1:AddButton({
+    Name = "BLUE",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.Blue:FireServer()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "BLUE: Creates a vacuum that pulls enemies toward a central point, showcasing Gojo's control over space.",
+            Time = 5
+        })
+    end
+})
+
+Tab1:AddButton({
+    Name = "INFINITE VOID",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Events.UnlimitedVoid:FireServer()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "INFINITE VOID: Traps opponents in an endless void, bombarding them with overwhelming information, demonstrating Gojo's mastery.",
+            Time = 5
+        })
+    end
+})
+
+Tab1:AddButton({
+    Name = "HOLLOW PURPLE NUKE",
+    Callback = function()
+        game:GetService("Players").LocalPlayer.Character:FindFirstChild("Six Eyes"):FindFirstChild("Awakening : Serious Mode").Event:FireServer()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "HOLLOW PURPLE NUKE: Combines 'Red' and 'Blue' into a massive explosion, showcasing Gojo's unparalleled power.",
+            Time = 5
+        })
+    end
+})
+
+-- Megumi's skills
+Tab1:AddButton({
+    Name = "Shikigami Summon",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "Shikigami Summon: Summons a shikigami, a spirit to assist in combat, enhancing versatility.",
+            Time = 5
+        })
+    end
+})
+
+Tab1:AddButton({
+    Name = "Domain Expansion",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "Domain Expansion: Creates a controlled area that amplifies Megumi's abilities, gaining significant advantages.",
+            Time = 5
+        })
+    end
+})
+
+Tab1:AddButton({
+    Name = "Megumi Awaken",
+    Callback = function()
+        game:GetService("Players").LocalPlayer.Character:FindFirstChild("Honored One"):FindFirstChild("Awakening : Serious Mode").Event:FireServer()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "MEGUMI AWAKEN: Activates the 'Awakening: Serious Mode' for the Honored One, enhancing combat capabilities.",
+            Time = 5
+        })
+    end
+})
+
+Tab1:AddButton({
+    Name = "MOHRAGA",
+    Callback = function()
+        game:GetService("Players").LocalPlayer.Character.Mahoraga.Skill.Furube:FireServer()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "MOHRAGA: Activates Mahoraga's skill 'Furube', unleashing powerful attacks.",
+            Time = 5
+        })
+    end
+})
+
+-- Sukuna's skills
+Tab1:AddButton({
+    Name = "Cursed Technique",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "Cursed Technique: Unleashes powerful cursed energy attacks against foes, reflecting Sukuna's mastery.",
+            Time = 5
+        })
+    end
+})
+
+Tab1:AddButton({
+    Name = "Domain Expansion",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "Domain Expansion: Creates a domain unique to Sukuna, enhancing abilities and making escape difficult.",
+            Time = 5
+        })
+    end
+})
+
+Tab1:AddButton({
+    Name = "Sukuna Awaken",
+    Callback = function()
+        game:GetService("Players").LocalPlayer.Character.Inspiration:FindFirstChild("Awakening : Serious Mode").Event:FireServer()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "SUKUNA AWAKEN: Activates the 'Awakening: Serious Mode' for Inspiration, dramatically enhancing abilities.",
+            Time = 5
+        })
+    end
+})
+
+-- Random Skill Spam
+Tab1:AddButton({
+    Name = "Playful Cloud",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.PlayfulCloud:FireServer()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "Playful Cloud: Initiates a playful cloud attack on the target, causing disruption.",
+            Time = 5
+        })
+    end
+})
+
+Tab1:AddButton({
+    Name = "Container Kick",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.ContainerKick:FireServer()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "Container Kick: Kicks the container, causing an explosive effect that damages nearby enemies.",
+            Time = 5
+        })
+    end
+})
+
+Tab1:AddButton({
+    Name = "Shutter Doors",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.ShutterDoors:FireServer()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "Shutter Doors: Activates the shutter doors skill, blocking pathways and trapping enemies.",
+            Time = 5
+        })
+    end
+})
+
+Tab1:AddButton({
+    Name = "Lucky Beatdown",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.LuckyBeatdown:FireServer()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "Lucky Beatdown: Unleashes a powerful beatdown on the opponent, showcasing brute strength.",
+            Time = 5
+        })
+    end
+})
+
+-- Additional Skills
+Tab1:AddButton({
+    Name = "Unlimited Fire Works",
+    Callback = function()
+        game:GetService("Players").LocalPlayer.Character:FindFirstChild("Unlimited Flex Works").LocalScript.Event:FireServer()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "Unlimited Fire Works: Activates 'Unlimited Flex Works' with an explosive display of power.",
+            Time = 5
+        })
+    end
+})
+
+Tab1:AddButton({
+    Name = "KJ Drop Kick",
+    Callback = function()
+        game:GetService("ReplicatedStorage").KJ.Remote.DropKick2:FireServer()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "KJ Drop Kick: Unleashes a powerful drop kick attack on your enemy.",
+            Time = 5
+        })
+    end
+})
+
+Tab1:AddButton({
+    Name = "Megumi Serpent",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.BanishPath:FireServer()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "Megumi Serpent: Summons a serpent with Megumi's banishing path skill.",
+            Time = 5
+        })
+    end
+})
+
+Tab1:AddButton({
+    Name = "Gojo Hollow Purple v-2",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.Purple:FireServer()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "Gojo Hollow Purple v-2: Unleashes Gojo's improved Hollow Purple technique.",
+            Time = 5
+        })
+    end
+})
+
+Tab1:AddButton({
+    Name = "Gojo V-2 Red",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.Red2:FireServer()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "Gojo V-2 Red: Unleashes the enhanced RED technique with greater power.",
+            Time = 5
+        })
+    end
+})
+
+Tab1:AddButton({
+    Name = "Gojo V-2 Blue",
+    Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.Blue2:FireServer()
+        OrionLib:MakeNotification({
+            Name = "Skill Activated",
+            Content = "Gojo V-2 Blue: Activates the enhanced BLUE technique with improved control.",
+            Time = 5
+        })
+    end
+})
+
+-- Make sure the UI is shown
+OrionLib:Init()
